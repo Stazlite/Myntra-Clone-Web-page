@@ -1,0 +1,437 @@
+/* ===== HEADER CONTAINER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+/* ===== LOGO ===== */
+.left .logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+/* ===== NAVIGATION MENU ===== */
+.center .nav-links {
+  display: flex;          /* Puts Men, Women, Kids in a row */
+  align-items: center;    /* Vertically center items */
+  list-style: none;       /* Remove default bullets */
+  gap: 30px;              /* Spacing between items */
+  margin: 0;
+  padding: 0;
+}
+
+.center .nav-links li {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: #282c3f;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.center .nav-links li:hover {
+  color: #ff3f6c;
+}
+
+/* Underline animation */
+.center .nav-links li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ff3f6c;
+  transition: width 0.3s ease;
+}
+
+.center .nav-links li:hover::after {
+  width: 100%;
+}
+
+/* ===== SEARCH BAR ===== */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f6;
+  border-radius: 4px;
+  padding: 5px 10px;
+  max-width: 350px;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.search button {
+  background-color: #ff3f6c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #e73160;
+}
+
+/* ===== RIGHT SECTION ===== */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right .sign {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #282c3f;
+  transition: color 0.3s ease;
+}
+
+.right .sign:hover {
+  color: #ff3f6c;
+}
+
+/* Cart button styling */
+.cart button {
+  background-color: #ff3f6c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cart button:hover {
+  background-color: #e73160;
+}
+
+
+
+
+
+.banner {
+  width: 100%;
+  height: 400px; /* Default height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background: #000; /* Fallback background color */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes GIF fill the container nicely */
+  border-radius: 12px;
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.banner img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .banner {
+    height: 250px;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .banner {
+    height: 180px;
+  }
+}
+
+
+
+
+
+
+
+/* Main container */
+.men {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.men h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Image grid container */
+.men-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Image styling */
+.men-images img {
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover animation for images */
+.men-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .men h2 {
+    font-size: 1.6rem;
+  }
+
+  .men-images img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .men-images img {
+    height: 220px;
+  }
+}
+
+
+
+
+
+
+
+
+/* Main container */
+.women {
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px;
+  background: #fff7f9; /* Soft pink background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.women h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e75480; /* Elegant pink for women section */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline effect for heading */
+.women h2::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: #e75480;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Image grid container */
+.women-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+/* Individual images */
+.women-images img {
+  width: 100%;
+  max-width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover animation */
+.women-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .women h2 {
+    font-size: 1.6rem;
+  }
+
+  .women-images img {
+    height: 280px;
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 480px) {
+  .women-images img {
+    height: 220px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Main footer container */
+.footer {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-top: 4px solid #ff6f61;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* About Us heading */
+.footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ff6f61;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Address and contact info */
+.footer h5 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 5px 0;
+  color: #ddd;
+}
+
+/* Subscription section */
+.right1 {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Email input styling */
+.right1 input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  width: 250px;
+  max-width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.right1 input:focus {
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.7);
+}
+
+/* Subscribe button styling */
+.right1 .but {
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.right1 .but:hover {
+  background: #e85b50;
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .footer h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer h5 {
+    font-size: 0.9rem;
+  }
+
+  .right1 input {
+    width: 100%;
+  }
+
+  .right1 .but {
+    width: 100%;
+  }
+}
+
+
